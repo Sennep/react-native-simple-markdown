@@ -107,7 +107,7 @@ export default (styles) => ({
           bullet = createElement(Text, { key: state.key, style: styles.listItemNumber  }, (i + 1) + '. ')
         }
         else {
-          bullet = createElement(Text, { key: state.key, style: styles.listItemBullet }, '\u2022 ')
+          bullet = createElement(Text, { key: state.key, style: styles.listItemBullet }, '\u2014')
         }
         const listItemText = createElement(Text, { key: state.key + 1, style: styles.listItemText }, output(item, state))
         return createElement(View, {
