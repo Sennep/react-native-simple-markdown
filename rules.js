@@ -60,6 +60,8 @@ export default (styles) => ({
   },
   heading: {
     react: (node, output, state) => {
+      node.content.unshift({content: '“', type: 'text'})
+      node.content.push({content: '”', type: 'text'})
       state.withinText = true
       return createElement(Text, {
         key: state.key,
